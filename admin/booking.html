@@ -57,27 +57,27 @@
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                         Bảng điều khiển
                     </a>
-                    <a class="nav-link" href="/admin/tour">
+                    <a class="nav-link" href="/admin/tour.html">
                         <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                         Tour Management
                     </a>
-                    <a class="nav-link" href="/admin/post">
+                    <a class="nav-link" href="/admin/post.html">
                         <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                         News Management
                     </a>
-                    <a class="nav-link" href="/admin/employee">
+                    <a class="nav-link" href="/admin/employee.html">
                         <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                         Employee Management
                     </a>
-                    <a class="nav-link" href="/admin/customer">
+                    <a class="nav-link" href="/admin/customer.html">
                         <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                         Customer Management
                     </a>
-                    <a class="nav-link" href="/admin/booking">
+                    <a class="nav-link" href="/admin/booking.html">
                         <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                         Booking Management
                     </a>
-                    <a class="nav-link" href="/admin/comment">
+                    <a class="nav-link" href="/admin/comment.html">
                         <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                         Comment Management
                     </a>
@@ -92,6 +92,87 @@
                 <h1 class="mt-4">Danh sách đặt chuyến du lịch</h1>
                 <div class="card mb-4">
                     <div class="card-header">
+                        <div class="alert alert-success">
+                        <strong>Success!</strong>
+                        </div>
+                        <div class="alert alert-danger">
+                        <strong>Tour is booking. Don't delete !</strong>
+                        </div>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                data-bs-target="#exampleModalAdd">
+                            Đặt tour
+                        </button>
+                        <!-- Modal Add-->
+                        <div class="modal fade" id="exampleModalAdd" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                        <div class="modal-dialog modal-lg ">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabelll">Đặt tour</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form method="post" enctype="multipart/form-data">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label for="addname"
+                                                class="col-form-label">Tên chuyến du lịch:</label>
+                                            <input type="text" class="form-control"
+                                                id="addname" name="name" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label for="addname"
+                                                class="col-form-label">Số lượng người lớn:</label>
+                                            <input type="number" class="form-control"
+                                                id="adult" name="adult" required>
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="addname"
+                                                class="col-form-label">Số lượng trẻ em:</label>
+                                            <input type="number" class="form-control"
+                                                id="children" name="children" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label for="addname"
+                                                class="col-form-label">Khách hàng:</label>
+                                            <input type="text" class="form-control"
+                                                id="customer" name="customer" required>
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="addname"
+                                                class="col-form-label">Tổng tiền:</label>
+                                            <input type="number" class="form-control"
+                                                id="total" name="total" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label for="addname"
+                                                class="col-form-label">Ngày đặt phòng:</label>
+                                            <input type="date" class="form-control"
+                                                id="book_date" name="book_date" required>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Save </button>
+                                </div>
+                                </form>
+                            </div>
+
+                            </div>
+                        </div>
+                        </div>
+                        <!-- Modal Add-->
                     </div>
                     <div class="card-body">
                         <table id="datatablesSimple">
